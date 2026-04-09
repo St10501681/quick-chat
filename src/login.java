@@ -38,6 +38,12 @@ public class login {
     }
     //check if cellphone number has '27'and has 11 Digits
     public static boolean checkCellphone(String cellphone_number){
-        return cellphone_number.matches("27\\d{9}");
+        if(cellphone_number.matches("27\\+\\d{9}")){
+            System.out.println("valid format");
+            return true;
+        }else{
+            System.out.println("incorrect formative");
+            return false;
+        }
     }
 }
